@@ -42,4 +42,62 @@ const siteContent = { // BU NESNEYİ DEĞİŞTİRMEYİN
 console.log('Proje açıldı!')
 
 
-/* Kodlar Buradan aşağıya */
+ /* Kodlar Buradan aşağıya */
+const navList = document.querySelectorAll('nav a');
+console.log("basliktaki linklerin listesi", navList);
+navList[0].textContent = siteContent.nav["nav-item-1"];
+navList[1].textContent = siteContent.nav["nav-item-2"];
+navList[2].textContent = siteContent.nav["nav-item-3"];
+navList[3].textContent = siteContent.nav["nav-item-4"];
+navList[4].textContent = siteContent.nav["nav-item-5"];
+navList[5].textContent = siteContent.nav["nav-item-6"];
+
+[...navList].map((element , index) => {
+  navList[index].setAttribute("class" , "italic");
+})
+
+
+const domH1 = document.querySelectorAll('.cta-text h1');
+console.log(domH1);
+domH1[0].textContent = siteContent.cta["h1"];
+
+const domButton = document.querySelectorAll('button');
+domButton[0].textContent = siteContent.cta['button'];
+
+const imglogo = document.getElementById('logo-img');
+const imgSrcLogo = siteContent.images['logo-img'];
+/* imglogo.setAttribute("src" ,"../mocks/img/logo.png") */
+imglogo.setAttribute("src" ,"http://localhost:9000/img/logo.png")
+
+const imgCta =document.getElementById('cta-img');
+/* imgCta.setAttribute("src" , "../mocks/img/cta.png"); */
+imgCta.setAttribute("src" , "http://localhost:9000/img/cta.png");
+
+const imgMiddle = document.getElementById('middle-img');
+/* imgMiddle.setAttribute("src","../mocks/img/accent.png"); */
+imgMiddle.setAttribute("src","http://localhost:9000/img/accent.png");
+
+const h4basliklar = document.querySelectorAll("h4")
+console.log(h4basliklar);
+h4basliklar[0].textContent = siteContent["ana-içerik"]["özellikler-h4"];
+h4basliklar[1].textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+h4basliklar[2].textContent = siteContent["ana-içerik"]["servisler-h4"];
+h4basliklar[3].textContent = siteContent["ana-içerik"]["ürünler-h4"];
+h4basliklar[4].textContent = siteContent["ana-içerik"]["vizyon-h4"];
+h4basliklar[5].textContent = siteContent["iletisim"]["iletişim-h4"];
+
+const yazilar = document.querySelectorAll('p');
+console.log(yazilar);
+yazilar[0].textContent = siteContent["ana-içerik"]["özellikler-içerik"]
+yazilar[1].textContent = siteContent["ana-içerik"]["hakkımızda-içerik"]
+yazilar[2].textContent = siteContent["ana-içerik"]["servisler-içeriği"]
+yazilar[3].textContent = siteContent["ana-içerik"]["ürünler-içeriği"]
+yazilar[4].textContent = siteContent["ana-içerik"]["vizyon-içeriği"]
+yazilar[5].textContent = siteContent["iletisim"]["adres"]
+yazilar[6].textContent = siteContent["iletisim"]["telefon"]
+yazilar[7].textContent = siteContent["iletisim"]["email"]
+
+
+const footerNav =document.querySelectorAll('footer a');
+footerNav[0].textContent = siteContent.footer['copyright'];
+footerNav[0].setAttribute("class" , "bold");
